@@ -7,6 +7,8 @@ public class Hitter {
     private int Power; // Helps dictate distance of hit
     private int Speed; // Helps see what balls he can get to and how many bases he takes on the base path
     private String Position;
+    private String firstName;
+    private String lastName;
 
     public Hitter(int Contact, int Power, int Speed, String Position) {
         // Set the atributes for the player
@@ -14,6 +16,8 @@ public class Hitter {
         this.Power = Power;
         this.Speed = Speed;
         this.Position = Position;
+        firstName = "";
+        lastName = "";
     }
     // Get players contact
     public int getContact() {
@@ -31,4 +35,20 @@ public class Hitter {
     public String getPosition() {
         return Position;
     }
+    public String getFirst() {
+        return firstName;
+    }
+    public String getLast() {
+        return lastName;
+    }
+    public void setFirst(String s) {
+        firstName = s;
+    }
+    public void setLast(String s) {
+        lastName = s;
+    }
+    public String display() {
+        return "Contact: " + Contact + " Power: "+ Power + " Speed: " + Speed;
+    }
+
 }

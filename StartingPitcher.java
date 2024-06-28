@@ -8,6 +8,8 @@ public class StartingPitcher implements Pitcher {
     private int Stamina;
     private int Break;
     private String[] pitchMix;
+    private String firstName;
+    private String lastName;
 
     public StartingPitcher(int Velocity, int Control, int Break) {
         this.Velocity = Velocity;
@@ -20,6 +22,8 @@ public class StartingPitcher implements Pitcher {
         pitchMix[2] = "Slider";
         pitchMix[3] = "Sinker";
         pitchMix[4] = "Change-up";
+        firstName = "";
+        lastName = "";
     }
     public int getVelocity() {
         return Velocity;
@@ -32,5 +36,23 @@ public class StartingPitcher implements Pitcher {
     }
     public int getBreak() {
         return Break;
+    }
+    public String getFirst() {
+        return firstName;
+    }
+    public String getLast() {
+        return lastName;
+    }
+    public void setFirst(String s) {
+        firstName = s;
+    }
+    public void setLast(String s) {
+        lastName = s;
+    }
+    public String display() {
+        return"Velocity: " + Velocity + " Control: "+ Control + " Break: " + Break + " Stamina: " + Stamina;
+    }
+    public String getName() {
+        return firstName + " " + lastName;
     }
 }
